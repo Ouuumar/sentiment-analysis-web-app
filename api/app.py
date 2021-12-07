@@ -1,3 +1,4 @@
+from re import S
 import streamlit as st
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -36,16 +37,11 @@ def main():
         with st.form(key='nlpForm'):
             raw_text = st.text_area(label="Enter your text here")
             submit_button = st.form_submit_button(label="Analyze")
-        
-        col1, col2 = st.columns(2)
 
-        with col1:
+        with st.container():
             st.info('Results')
             st.write(sentiment_scores(raw_text))
-        
-        with col2:
-            st.info("Else")
-            st.write(". . .")
+
     
     else:
         st.subheader("About")
