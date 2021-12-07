@@ -1,20 +1,25 @@
 # sentiment-analysis-web-app
 
-## Requirements 
-
-    - Run pipreqs requirements.txt
-
-## Install selenium
-
-Download for windows: https://chromedriver.storage.googleapis.com/index.html?path=96.0.4664.45/
-
-Put the chromedriver.exe in your Windows folder
-
+Short and simple streamlit web app for sentiment analysis, containerized.
+This app was few tested with seleniumbase.
 
 ## Launch the app
 
-    - Run streamlit run app.py
+cd to the project location and run
 
-## Analyze sentiment
+    - docker-compose up
+  
+## Make analysis 
 
-    - Enter your sentence, click on "Analyze" and discover its sentiment
+Enter in the text section a sentence and click analyse to get the result sentiment of your phrase
+
+## When you are done
+
+    - docker-compose down
+
+# Details
+
+If you cancel the docker while building the image (like you do Crtl C). You will need to run :
+
+    - docker-compose down
+    - docker-compose up --build
