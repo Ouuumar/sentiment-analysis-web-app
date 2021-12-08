@@ -24,7 +24,7 @@ from seleniumbase import BaseCase
 class MyTestClass(BaseCase):
 
     def test_basics(self):
-        url = "http://host.docker.internal:8501/"
+        url = "http://host.docker.internal:8501"
         for sentence, exp_sentiment in tests.items():
             self.open(url)
             self.type('textarea', sentence)
